@@ -1,0 +1,5 @@
+/backend/**/target/
+frontend/poker-trainer/node_modules/
+.idea/
+.DS_Store
+.vscode
