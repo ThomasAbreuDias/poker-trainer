@@ -17,6 +17,7 @@
   <properties>
     <java.version>21</java.version>
     <spring.boot.version>3.3.4</spring.boot.version>
+    <junit.jupiter.version>5.10.3</junit.jupiter.version>
   </properties>
 
   <dependencyManagement>
@@ -27,6 +28,12 @@
         <version>${spring.boot.version}</version>
         <type>pom</type>
         <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>${junit.jupiter.version}</version>
+        <scope>test</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -39,6 +46,7 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.11.0</version>
           <configuration>
+            <useModulePath>false</useModulePath>
             <release>${java.version}</release>
           </configuration>
         </plugin>
